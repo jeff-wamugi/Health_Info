@@ -5,7 +5,8 @@ from rest_framework.response import Response
 from rest_framework import status, viewsets, generics, filters
 from .models import Program, Client, Enrollment
 from .serializers import ProgramSerializer, ClientSerializer, EnrollmentSerializer, ClientProfileSerializer
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.generics import RetrieveAPIView
 
 # Create your views here.
 # This is a Django view that handles HTTP requests for the health information system.
@@ -14,7 +15,7 @@ class ClientViewSet(viewsets.ModelViewSet):
     serializer_class = ClientSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'contact']
-    permission_classes = [AllowAny]
+    permission_classes = [AllowAny] # Allow any user to access this view
 
 class ProgramViewSet(viewsets.ModelViewSet):
     queryset = Program.objects.all()
