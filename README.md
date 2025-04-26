@@ -63,15 +63,15 @@ The system allows administrators to:
 ```bash
 SECRET_KEY=your-secret-key
 DEBUG=False
-ALLOWED_HOSTS=your-backend-name.onrender.com
+ALLOWED_HOSTS=health-info.onrender.com
 DATABASE_URL=postgresql://user:password@hostname:port/dbname
-CORS_ALLOWED_ORIGINS=https://your-frontend-name.vercel.app
+CORS_ALLOWED_ORIGINS=https://health-info-bice.vercel.app/
 ```
 
 ### Frontend `.env.production`
 
 ```bash
-REACT_APP_API_URL=https://your-backend-name.onrender.com/api/
+REACT_APP_API_URL=https://health-info.onrender.com/api/
 ```
 
 ---
