@@ -10,7 +10,7 @@ function Login({ onLogin }) {
 
   const loginUser = async () => {
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/token/', {
+      const res = await axios.post('https://health-info.onrender.com/api/token/', {
         username,
         password,
       });
