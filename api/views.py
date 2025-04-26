@@ -15,7 +15,7 @@ class ClientViewSet(viewsets.ModelViewSet):
     serializer_class = ClientSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'contact']
-    permission_classes = [AllowAny] # Allow any user to access this view
+    permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
 
 class ProgramViewSet(viewsets.ModelViewSet):
     queryset = Program.objects.all()
