@@ -19,15 +19,6 @@ from django.urls import path, include
 from django.conf import settings
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from django.contrib.auth import get_user_model
-
-# Automatically create superuser if none exist
-User = get_user_model()
-
-if not User.objects.filter(username='admin').exists():
-    User.objects.create_superuser('admin', 'jefftumuti@gmail.com', 'adminpassword123')
-
-
 urlpatterns = [
     path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
