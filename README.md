@@ -51,8 +51,8 @@ The system allows administrators to:
 
 | Service         | Link |
 |-----------------|------|
-| Frontend (React) | [https://health-info-bice.vercel.app/](#) |
-| Backend (API)   | [https://health-info.onrender.com/api](#) |
+| Frontend (React) | https://health-info-bice.vercel.app/ |
+| Backend (API)   | https://health-info.onrender.com/api |
 
 ---
 
@@ -242,9 +242,9 @@ Please fork the repository and submit a PR.
 
 ## 📢 Contact
 
-- Email: your-email@example.com
-- LinkedIn: [https://www.linkedin.com/in/jefferson-wamugi-5b0781186](#)
-- GitHub: [https://github.com/jeff-wamugi](#)
+- Email: jefftumuti@gmail.com
+- LinkedIn: https://www.linkedin.com/in/jefferson-wamugi-5b0781186
+- GitHub: https://github.com/jeff-wamugi
 
 ---
 
