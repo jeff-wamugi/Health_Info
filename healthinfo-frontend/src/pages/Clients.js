@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import api from '../api/api';
-import useNavigate from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Clients() {
   const [name, setName] = useState('');
