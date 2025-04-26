@@ -7,9 +7,6 @@ from .models import Program, Client, Enrollment
 from .serializers import ProgramSerializer, ClientSerializer, EnrollmentSerializer, ClientProfileSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.generics import RetrieveAPIView
-from django.http import HttpResponse
-from django.contrib.auth import get_user_model
-from django.core.management import call_command
 
 # Create your views here.
 # This is a Django view that handles HTTP requests for the health information system.
@@ -34,20 +31,3 @@ class ClientProfileView(generics.RetrieveAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientProfileSerializer
     permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
-
-def run_migrations(request):
-    call_command('migrate')
-    return HttpResponse('✅ Migrations applied successfully!')
-
-def create_superuser(request):
-    User = get_user_model()
-
-    if not User.objects.filter(username='admin').exists():
-        User.objects.create_superuser(
-            username='admin',
-            email='admin@example.com',
-            password='adminpassword123'
-        )
-        return HttpResponse("✅ Superuser created successfully!")
-    else:
-        return HttpResponse("⚠️ Superuser already exists.")
