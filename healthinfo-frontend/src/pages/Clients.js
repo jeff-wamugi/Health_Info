@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import api from '../api/api';
+import useNavigate from 'react-router-dom';
 
 function Clients() {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
   const [contact, setContact] = useState('');
+  const navigate = useNavigate();
 
   const createClient = async () => {
     try {
@@ -16,6 +18,7 @@ function Clients() {
         contact
       });
       alert('Client registered successfully!');
+      navigate('/search'); // Redirect to the clients search page after successful registration
     } catch (err) {
       alert('Error registering client');
       console.error(err);
