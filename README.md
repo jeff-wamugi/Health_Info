@@ -61,11 +61,7 @@ The system allows administrators to:
 ### Backend `.env` (local)
 
 ```bash
-SECRET_KEY=your-secret-key
-DEBUG=False
-ALLOWED_HOSTS=health-info.onrender.com
-DATABASE_URL=postgresql://user:password@hostname:port/dbname
-CORS_ALLOWED_ORIGINS=https://health-info-bice.vercel.app/
+SECRET_KEY=my-secret-key
 ```
 
 ### Frontend `.env.production`
