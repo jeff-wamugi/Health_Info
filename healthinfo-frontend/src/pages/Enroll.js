@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import api from '../api/api';
+import { useNavigate } from 'react-router-dom';
 
 function Enroll() {
   const [clients, setClients] = useState([]);
   const [programs, setPrograms] = useState([]);
   const [selectedClient, setSelectedClient] = useState('');
   const [selectedProgram, setSelectedProgram] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +26,7 @@ function Enroll() {
         program: selectedProgram
       });
       alert('Client enrolled in program!');
+      navigate('/'); // Redirect to the dashboard after successful enrollment
     } catch (err) {
       alert('Error enrolling client');
       console.error(err);
