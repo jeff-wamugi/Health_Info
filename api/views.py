@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.generics import RetrieveAPIView
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
+from django.core.management import call_command
 
 # Create your views here.
 # This is a Django view that handles HTTP requests for the health information system.
@@ -33,6 +34,10 @@ class ClientProfileView(generics.RetrieveAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientProfileSerializer
     permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
+
+def run_migrations(request):
+    call_command('migrate')
+    return HttpResponse('✅ Migrations applied successfully!')
 
 def create_superuser(request):
     User = get_user_model()
