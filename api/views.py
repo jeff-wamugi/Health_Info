@@ -20,11 +20,14 @@ class ClientViewSet(viewsets.ModelViewSet):
 class ProgramViewSet(viewsets.ModelViewSet):
     queryset = Program.objects.all()
     serializer_class = ProgramSerializer
+    permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
 
 class EnrollmentViewSet(viewsets.ModelViewSet):
     queryset = Enrollment.objects.all()
     serializer_class = EnrollmentSerializer
+    permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
 
 class ClientProfileView(generics.RetrieveAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientProfileSerializer
+    permission_classes = [IsAuthenticated] # Allow an authenticated user to access this view
