@@ -10,6 +10,7 @@ function Login({ onLogin }) {
   const navigate = useNavigate();
 
   const loginUser = async () => {
+    setLoading(true); // Set loading state to true
     try {
       const res = await axios.post('https://health-info.onrender.com/api/token/', {
         username,
@@ -23,6 +24,7 @@ function Login({ onLogin }) {
     } catch (err) {
       setError('Invalid username or password');
     }
+    setLoading(false); // Set loading state back to false
   };
 
   return (
