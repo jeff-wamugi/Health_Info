@@ -1,5 +1,7 @@
 # Health Information Management System
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 This is a Full-Stack Health Information Management System built with:
 
 - 🐍 Django + Django REST Framework (Backend API)
@@ -232,7 +234,7 @@ python manage.py test
 
 ## 📌 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
