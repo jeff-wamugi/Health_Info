@@ -47,6 +47,13 @@ The system allows administrators to:
 
 ---
 
+## PowerPoint Presentation
+Link https://docs.google.com/presentation/d/15ySoTe23zOllUmKy176ud38SwI9xOjBJhPJx1kTdX4E/edit?usp=sharing
+
+---
+
+---
+
 ## 🚀 Live Demo
 
 | Service         | Link |
