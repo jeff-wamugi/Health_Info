@@ -43,9 +43,13 @@ function Login({ onLogin }) {
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p style={styles.error}>{error}</p>}
+        {!loading ? (
         <button style={styles.button} onClick={loginUser}>
           Sign In
         </button>
+        ) : (
+          <p>Authenticating...</p>
+        )}
       </div>
     </div>
   );
